@@ -1,0 +1,37 @@
+pack: standard
+version: 1
+schema_version: v1
+
+# The standard health checks. This is the whole product for most people: point
+# it at any agent and get a health read, no configuration, no per domain rules.
+#
+# Every check here is generic. None of them knows or cares what the agent does,
+# so the same pack works on a support bot, a voice agent, or a coding agent
+# without a single change. The two benchmark checks calibrate to the agent's own
+# normal rather than to a number that would be arguable for any given agent.
+#
+# Everything runs on defaults. The values below are shown only so they are easy
+# to find and tune; deleting them changes nothing.
+
+evals:
+  # Zero config, no threshold at all.
+  core.errors: {}
+  core.loop_detection:
+    max_occurrences: 3
+  core.redundant_tool_calls:
+    max_repeats: 2
+  core.termination_state:
+    allow_states: [complete]
+
+  # Generous default, tune down for a latency sensitive agent.
+  core.latency_budget:
+    max_span_ms: 60000
+
+  # Self calibrating: each run is judged against the median of the agent's own
+  # completed runs, not against a fixed number.
+  core.efficiency:
+    tolerance: 3.0
+    floor: 12
+  core.conversation_length:
+    tolerance: 3.0
+    floor: 10

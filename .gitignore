@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node, for the TypeScript package
+node_modules/
+*.tsbuildinfo
+
+# Local output from running the tool
+agent-evals-report.json
+*.local.yaml
+quality/
+*.html.local
+
+# Secrets never belong here. The tool reads credentials from the environment.
+.env
+.env.*
+!.env.example
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

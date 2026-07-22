@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "prefactor-evals-no-llm"
+version = "0.1.0"
+description = "Deterministic, non-LLM evals for AI agents. Zero token cost, zero subjectivity, CI friendly."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Prefactor" }]
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+keywords = ["agents", "evals", "evaluation", "observability", "prefactor"]
+
+# One runtime dependency, for reading pack files.
+# JSON Schema validation is an optional extra: without it the two schema evals
+# report skip with a clear reason rather than failing the run.
+dependencies = ["PyYAML>=6.0"]
+
+[project.optional-dependencies]
+schema = ["jsonschema>=4.0"]
+dev = ["pytest>=7.0", "jsonschema>=4.0"]
+
+[project.scripts]
+prefactor-evals-no-llm = "prefactor_evals_no_llm.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/prefactordev/prefactor-agent-evals-no-llm"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/prefactor_evals_no_llm"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

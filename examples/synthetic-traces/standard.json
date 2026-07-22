@@ -1,0 +1,1499 @@
+{
+ "instances": [
+  {
+   "id": "01kz0clean000000000000000000",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T10:00:00Z",
+   "ended_at": "2026-07-15T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "c0-a",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 800
+    },
+    {
+     "id": "c0-b",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1200
+    },
+    {
+     "id": "c0-c",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "do_lookup",
+     "schema_name": "agent:do_lookup",
+     "state": "complete",
+     "input": {
+      "q": "c0"
+     },
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 5
+    },
+    {
+     "id": "c0-d",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1400
+    },
+    {
+     "id": "c0-e",
+     "parent_id": null,
+     "type": "output",
+     "name": "reply",
+     "schema_name": "agent:reply",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 600
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz0clean010000000000000000",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T10:00:00Z",
+   "ended_at": "2026-07-15T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "c1-a",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 800
+    },
+    {
+     "id": "c1-b",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1200
+    },
+    {
+     "id": "c1-c",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "do_lookup",
+     "schema_name": "agent:do_lookup",
+     "state": "complete",
+     "input": {
+      "q": "c1"
+     },
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 5
+    },
+    {
+     "id": "c1-d",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1400
+    },
+    {
+     "id": "c1-e",
+     "parent_id": null,
+     "type": "output",
+     "name": "reply",
+     "schema_name": "agent:reply",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 600
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz0clean020000000000000000",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T10:00:00Z",
+   "ended_at": "2026-07-15T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "c2-a",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 800
+    },
+    {
+     "id": "c2-b",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1200
+    },
+    {
+     "id": "c2-c",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "do_lookup",
+     "schema_name": "agent:do_lookup",
+     "state": "complete",
+     "input": {
+      "q": "c2"
+     },
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 5
+    },
+    {
+     "id": "c2-d",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1400
+    },
+    {
+     "id": "c2-e",
+     "parent_id": null,
+     "type": "output",
+     "name": "reply",
+     "schema_name": "agent:reply",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 600
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz0clean030000000000000000",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T10:00:00Z",
+   "ended_at": "2026-07-15T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "c3-a",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 800
+    },
+    {
+     "id": "c3-b",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1200
+    },
+    {
+     "id": "c3-c",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "do_lookup",
+     "schema_name": "agent:do_lookup",
+     "state": "complete",
+     "input": {
+      "q": "c3"
+     },
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 5
+    },
+    {
+     "id": "c3-d",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1400
+    },
+    {
+     "id": "c3-e",
+     "parent_id": null,
+     "type": "output",
+     "name": "reply",
+     "schema_name": "agent:reply",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 600
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz0clean040000000000000000",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T10:00:00Z",
+   "ended_at": "2026-07-15T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "c4-a",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 800
+    },
+    {
+     "id": "c4-b",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1200
+    },
+    {
+     "id": "c4-c",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "do_lookup",
+     "schema_name": "agent:do_lookup",
+     "state": "complete",
+     "input": {
+      "q": "c4"
+     },
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 5
+    },
+    {
+     "id": "c4-d",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1400
+    },
+    {
+     "id": "c4-e",
+     "parent_id": null,
+     "type": "output",
+     "name": "reply",
+     "schema_name": "agent:reply",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 600
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz0clean050000000000000000",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T10:00:00Z",
+   "ended_at": "2026-07-15T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "c5-a",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 800
+    },
+    {
+     "id": "c5-b",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1200
+    },
+    {
+     "id": "c5-c",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "do_lookup",
+     "schema_name": "agent:do_lookup",
+     "state": "complete",
+     "input": {
+      "q": "c5"
+     },
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 5
+    },
+    {
+     "id": "c5-d",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1400
+    },
+    {
+     "id": "c5-e",
+     "parent_id": null,
+     "type": "output",
+     "name": "reply",
+     "schema_name": "agent:reply",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 600
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz0bloat000000000000000000",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T10:00:00Z",
+   "ended_at": "2026-07-15T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "01kz0bloat-00",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:step",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-01",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-02",
+     "parent_id": null,
+     "type": "other",
+     "name": "step",
+     "schema_name": "agent:step",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-03",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-04",
+     "parent_id": null,
+     "type": "other",
+     "name": "step",
+     "schema_name": "agent:step",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-05",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-06",
+     "parent_id": null,
+     "type": "other",
+     "name": "step",
+     "schema_name": "agent:step",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-07",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-08",
+     "parent_id": null,
+     "type": "other",
+     "name": "step",
+     "schema_name": "agent:step",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-09",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-10",
+     "parent_id": null,
+     "type": "other",
+     "name": "step",
+     "schema_name": "agent:step",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-11",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-12",
+     "parent_id": null,
+     "type": "other",
+     "name": "step",
+     "schema_name": "agent:step",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-13",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-14",
+     "parent_id": null,
+     "type": "other",
+     "name": "step",
+     "schema_name": "agent:step",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-15",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-16",
+     "parent_id": null,
+     "type": "other",
+     "name": "step",
+     "schema_name": "agent:step",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-17",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-18",
+     "parent_id": null,
+     "type": "other",
+     "name": "step",
+     "schema_name": "agent:step",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-19",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-20",
+     "parent_id": null,
+     "type": "other",
+     "name": "step",
+     "schema_name": "agent:step",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-21",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-22",
+     "parent_id": null,
+     "type": "other",
+     "name": "step",
+     "schema_name": "agent:step",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-23",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-24",
+     "parent_id": null,
+     "type": "other",
+     "name": "step",
+     "schema_name": "agent:step",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-25",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-26",
+     "parent_id": null,
+     "type": "other",
+     "name": "step",
+     "schema_name": "agent:step",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-27",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-28",
+     "parent_id": null,
+     "type": "other",
+     "name": "step",
+     "schema_name": "agent:step",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    },
+    {
+     "id": "01kz0bloat-29",
+     "parent_id": null,
+     "type": "output",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 900
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz0error000000000000000000",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T10:00:00Z",
+   "ended_at": "2026-07-15T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "err-a",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 800
+    },
+    {
+     "id": "err-b",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1200
+    },
+    {
+     "id": "err-c",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "do_lookup",
+     "schema_name": "agent:do_lookup",
+     "state": "failed",
+     "input": {
+      "q": "err"
+     },
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 5,
+     "error": {
+      "error_type": "Timeout",
+      "message": "gateway timed out"
+     }
+    },
+    {
+     "id": "err-d",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1400
+    },
+    {
+     "id": "err-e",
+     "parent_id": null,
+     "type": "output",
+     "name": "reply",
+     "schema_name": "agent:reply",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 600
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz0loop0000000000000000000",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T10:00:00Z",
+   "ended_at": "2026-07-15T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "01kz0loop-a",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 700
+    },
+    {
+     "id": "01kz0loop-t0",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "retry_fetch",
+     "schema_name": "agent:retry_fetch",
+     "state": "complete",
+     "input": {
+      "same": "args"
+     },
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 4
+    },
+    {
+     "id": "01kz0loop-t1",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "retry_fetch",
+     "schema_name": "agent:retry_fetch",
+     "state": "complete",
+     "input": {
+      "same": "args"
+     },
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 4
+    },
+    {
+     "id": "01kz0loop-t2",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "retry_fetch",
+     "schema_name": "agent:retry_fetch",
+     "state": "complete",
+     "input": {
+      "same": "args"
+     },
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 4
+    },
+    {
+     "id": "01kz0loop-t3",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "retry_fetch",
+     "schema_name": "agent:retry_fetch",
+     "state": "complete",
+     "input": {
+      "same": "args"
+     },
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 4
+    },
+    {
+     "id": "01kz0loop-t4",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "retry_fetch",
+     "schema_name": "agent:retry_fetch",
+     "state": "complete",
+     "input": {
+      "same": "args"
+     },
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 4
+    },
+    {
+     "id": "01kz0loop-z",
+     "parent_id": null,
+     "type": "output",
+     "name": "reply",
+     "schema_name": "agent:reply",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 500
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz0conv0000000000000000000",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T10:00:00Z",
+   "ended_at": "2026-07-15T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "01kz0conv-o00",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 700
+    },
+    {
+     "id": "01kz0conv-o01",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 700
+    },
+    {
+     "id": "01kz0conv-o02",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 700
+    },
+    {
+     "id": "01kz0conv-o03",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 700
+    },
+    {
+     "id": "01kz0conv-o04",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 700
+    },
+    {
+     "id": "01kz0conv-o05",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 700
+    },
+    {
+     "id": "01kz0conv-o06",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 700
+    },
+    {
+     "id": "01kz0conv-o07",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 700
+    },
+    {
+     "id": "01kz0conv-o08",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 700
+    },
+    {
+     "id": "01kz0conv-o09",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 700
+    },
+    {
+     "id": "01kz0conv-o10",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 700
+    },
+    {
+     "id": "01kz0conv-o11",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 700
+    },
+    {
+     "id": "01kz0conv-llm",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1000
+    },
+    {
+     "id": "01kz0conv-t",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "do_lookup",
+     "schema_name": "agent:do_lookup",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 5
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz0slow0000000000000000000",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T10:00:00Z",
+   "ended_at": "2026-07-15T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "slow-a",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 800
+    },
+    {
+     "id": "slow-b",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 120000
+    },
+    {
+     "id": "slow-c",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "do_lookup",
+     "schema_name": "agent:do_lookup",
+     "state": "complete",
+     "input": {
+      "q": "slow"
+     },
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 5
+    },
+    {
+     "id": "slow-d",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1400
+    },
+    {
+     "id": "slow-e",
+     "parent_id": null,
+     "type": "output",
+     "name": "reply",
+     "schema_name": "agent:reply",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 600
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz0cancel00000000000000000",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T10:00:00Z",
+   "ended_at": "2026-07-15T10:05:00Z",
+   "state": "cancelled",
+   "spans": [
+    {
+     "id": "canc-a",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 800
+    },
+    {
+     "id": "canc-b",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1200
+    },
+    {
+     "id": "canc-c",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "do_lookup",
+     "schema_name": "agent:do_lookup",
+     "state": "complete",
+     "input": {
+      "q": "canc"
+     },
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 5
+    },
+    {
+     "id": "canc-d",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T10:00:00Z",
+     "ended_at": "2026-07-15T10:00:01Z",
+     "duration_ms": 1400
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  }
+ ]
+}
