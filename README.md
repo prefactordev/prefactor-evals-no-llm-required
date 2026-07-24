@@ -169,11 +169,22 @@ normalized schema every check reads, and tests assert the two never drift.
 House rules: no em dashes or smart quotes anywhere, no LLM calls anywhere
 including in tooling, synthetic and fictional examples only.
 
-## Status
+## Two implementations, held to the same result
 
-Python is implemented and tested. A TypeScript package to the same spec is in
-progress; until it lands, the spec's rule that both languages implement every
-check is a goal rather than a fact.
+`packages/python` and `packages/typescript` both implement the spec. The point
+is not that two languages exist, it is that they agree: `conformance/` runs both
+over the same fixtures and diffs every result, status, message, evidence and
+values. Any divergence fails CI.
+
+```
+python conformance/compare.py
+```
+
+Python is the complete implementation: all checks, the Prefactor seam, live
+mode, the dashboard and the CLI. TypeScript currently implements the seven
+standard checks and the runner, and is proven conformant on those. It does not
+yet have the seam, live mode, the optional checks or a CLI, so today it is a
+library you drive from your own code against trace files.
 
 ## License
 
