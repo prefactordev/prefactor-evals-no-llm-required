@@ -1494,6 +1494,242 @@
    },
    "cost": null,
    "metadata": {}
+  },
+  {
+   "id": "01kz0bound-loop-at-limit0000",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T11:00:00Z",
+   "ended_at": "2026-07-15T11:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "bl-0",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "edge_tool",
+     "schema_name": "agent:edge_tool",
+     "state": "complete",
+     "input": {
+      "same": "args"
+     },
+     "output": {},
+     "started_at": "2026-07-15T11:00:00Z",
+     "ended_at": "2026-07-15T11:00:01Z",
+     "duration_ms": 4
+    },
+    {
+     "id": "bl-1",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "edge_tool",
+     "schema_name": "agent:edge_tool",
+     "state": "complete",
+     "input": {
+      "same": "args"
+     },
+     "output": {},
+     "started_at": "2026-07-15T11:00:00Z",
+     "ended_at": "2026-07-15T11:00:01Z",
+     "duration_ms": 4
+    },
+    {
+     "id": "bl-2",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "edge_tool",
+     "schema_name": "agent:edge_tool",
+     "state": "complete",
+     "input": {
+      "same": "args"
+     },
+     "output": {},
+     "started_at": "2026-07-15T11:00:00Z",
+     "ended_at": "2026-07-15T11:00:01Z",
+     "duration_ms": 4
+    }
+   ],
+   "input": {},
+   "output": {},
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz0bound-loop-over-limit00",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T11:00:00Z",
+   "ended_at": "2026-07-15T11:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "bo-0",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "edge_tool2",
+     "schema_name": "agent:edge_tool2",
+     "state": "complete",
+     "input": {
+      "same": "args"
+     },
+     "output": {},
+     "started_at": "2026-07-15T11:00:00Z",
+     "ended_at": "2026-07-15T11:00:01Z",
+     "duration_ms": 4
+    },
+    {
+     "id": "bo-1",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "edge_tool2",
+     "schema_name": "agent:edge_tool2",
+     "state": "complete",
+     "input": {
+      "same": "args"
+     },
+     "output": {},
+     "started_at": "2026-07-15T11:00:00Z",
+     "ended_at": "2026-07-15T11:00:01Z",
+     "duration_ms": 4
+    },
+    {
+     "id": "bo-2",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "edge_tool2",
+     "schema_name": "agent:edge_tool2",
+     "state": "complete",
+     "input": {
+      "same": "args"
+     },
+     "output": {},
+     "started_at": "2026-07-15T11:00:00Z",
+     "ended_at": "2026-07-15T11:00:01Z",
+     "duration_ms": 4
+    },
+    {
+     "id": "bo-3",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "edge_tool2",
+     "schema_name": "agent:edge_tool2",
+     "state": "complete",
+     "input": {
+      "same": "args"
+     },
+     "output": {},
+     "started_at": "2026-07-15T11:00:00Z",
+     "ended_at": "2026-07-15T11:00:01Z",
+     "duration_ms": 4
+    }
+   ],
+   "input": {},
+   "output": {},
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz0bound-latency-at-ceil00",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T11:00:00Z",
+   "ended_at": "2026-07-15T11:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "la-1",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T11:00:00Z",
+     "ended_at": "2026-07-15T11:00:01Z",
+     "duration_ms": 60000
+    }
+   ],
+   "input": {},
+   "output": {},
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz0bound-latency-over-ceil",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T11:00:00Z",
+   "ended_at": "2026-07-15T11:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "lo-1",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm-call",
+     "schema_name": "agent:llm-call",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-15T11:00:00Z",
+     "ended_at": "2026-07-15T11:00:01Z",
+     "duration_ms": 60001
+    }
+   ],
+   "input": {},
+   "output": {},
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz0bound-redundant-at-lim0",
+   "agent_id": "01kz0agent000000000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-15T11:00:00Z",
+   "ended_at": "2026-07-15T11:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "ra-0",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "rep_tool",
+     "schema_name": "agent:rep_tool",
+     "state": "complete",
+     "input": {
+      "x": 1
+     },
+     "output": {},
+     "started_at": "2026-07-15T11:00:00Z",
+     "ended_at": "2026-07-15T11:00:01Z",
+     "duration_ms": 3
+    },
+    {
+     "id": "ra-1",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "rep_tool",
+     "schema_name": "agent:rep_tool",
+     "state": "complete",
+     "input": {
+      "x": 1
+     },
+     "output": {},
+     "started_at": "2026-07-15T11:00:00Z",
+     "ended_at": "2026-07-15T11:00:01Z",
+     "duration_ms": 3
+    }
+   ],
+   "input": {},
+   "output": {},
+   "cost": null,
+   "metadata": {}
   }
  ]
 }

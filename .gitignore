@@ -30,3 +30,4 @@ quality/
 .idea/
 .DS_Store
 Thumbs.db
+packages/typescript/dist/

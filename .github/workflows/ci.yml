@@ -47,6 +47,47 @@ jobs:
         working-directory: packages/python
         run: python -m pytest tests -q
 
+  conformance:
+    # The spec's central claim is that a check means the same thing in both
+    # languages. Nothing enforces that except this, so a divergence fails the
+    # build rather than being discovered by a user.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Python package
+        working-directory: packages/python
+        run: python -m pip install -e ".[dev]"
+
+      - name: Build TypeScript package
+        working-directory: packages/typescript
+        run: |
+          npm install
+          npx tsc -p tsconfig.json
+
+      - name: Both languages must agree
+        run: python conformance/compare.py
+
+  typescript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Type check and build
+        working-directory: packages/typescript
+        run: |
+          npm install
+          npx tsc --noEmit -p tsconfig.json
+          npx tsc -p tsconfig.json
+
   no-llm:
     # The package is named for what it does not do. A model client arriving by
     # way of a transitive dependency would break the promise quietly, so it is
@@ -61,7 +102,7 @@ jobs:
       - name: No model client in the source
         run: |
           if grep -rniE '\b(openai|anthropic|cohere|mistralai|google\.generativeai|litellm|langchain_openai)\b' \
-               packages/python/src --include='*.py'; then
+               packages/python/src packages/typescript/src --include='*.py' --include='*.ts'; then
             echo "::error::a model client appears in the source of a no-LLM package"
             exit 1
           fi
