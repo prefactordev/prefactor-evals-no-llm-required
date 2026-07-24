@@ -9,8 +9,10 @@ from typing import Optional
 from .result import FAIL, PASS, SKIP
 from .runner import RunReport
 
-CTA = ("Run these continuously against production traffic in Prefactor. "
-       "Free dev tier, 25k spans/month: https://prefactor.tech/start")
+# The signup URL is intentionally omitted until a real, tracked one exists.
+# Printing a dead link in every scorecard is worse than printing none.
+CTA = ("Run these continuously against production traffic in Prefactor's free "
+       "dev tier.")
 
 CORE = "core."
 

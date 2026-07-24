@@ -15,8 +15,7 @@ based evals, when they ship, are separate packages (`prefactor-evals-llm`,
 ## Quickstart
 
 1. **Instrument your agent** with the Prefactor SDK, TypeScript or Python, and
-   let it run. You cannot write eval criteria for an agent you cannot see. Free
-   dev tier, 25k spans/month: https://prefactor.tech/start
+   let it run. You cannot write eval criteria for an agent you cannot see.
 2. **Install.**
    ```
    pip install prefactor-evals-no-llm
