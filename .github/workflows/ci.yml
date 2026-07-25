@@ -1,0 +1,171 @@
+name: CI
+
+# The library's whole claim is that results are deterministic and safe to gate a
+# build on. That claim is worth nothing if the suite only ever runs on the
+# author's machine, so it runs on every push and every pull request, across the
+# Python versions the package says it supports.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        # The floor and the ceiling of what pyproject declares, plus one
+        # non-Linux runner: path handling and line endings differ there, and
+        # this library was written on Windows.
+        python: ["3.10", "3.13"]
+        os: [ubuntu-latest]
+        include:
+          - python: "3.13"
+            os: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+
+      - name: Install
+        working-directory: packages/python
+        run: python -m pip install -e ".[dev]"
+
+      - name: Test
+        working-directory: packages/python
+        run: python -m pytest tests -q
+
+  conformance:
+    # The spec's central claim is that a check means the same thing in both
+    # languages. Nothing enforces that except this, so a divergence fails the
+    # build rather than being discovered by a user.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Python package
+        working-directory: packages/python
+        run: python -m pip install -e ".[dev]"
+
+      - name: Build TypeScript package
+        working-directory: packages/typescript
+        run: |
+          npm install
+          npx tsc -p tsconfig.json
+
+      - name: Both languages must agree, standard pack
+        run: python conformance/compare.py
+
+      - name: Both languages must agree, optional checks
+        run: python conformance/compare.py conformance/advanced_pack.json examples/synthetic-traces/advanced.json
+
+      - name: Both languages must agree, bundled advanced pack
+        # By bare name, so this also holds Python's bundled advanced.yaml and
+        # the TypeScript ADVANCED_PACK constant to the same results. A drift
+        # between the two shipped packs fails here.
+        run: python conformance/compare.py advanced examples/synthetic-traces/advanced.json
+
+  typescript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Type check, build and test
+        working-directory: packages/typescript
+        run: |
+          npm install
+          npx tsc --noEmit -p tsconfig.json
+          npm test
+
+      - name: No vulnerable dependencies
+        working-directory: packages/typescript
+        # The package has no runtime dependencies and only a compiler and types
+        # in dev. Anything that drags in a vulnerable tree does not belong here.
+        run: npm audit --audit-level=moderate
+
+  no-llm:
+    # The package is named for what it does not do. A model client arriving by
+    # way of a transitive dependency would break the promise quietly, so it is
+    # checked rather than trusted.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: No model client in the source
+        run: |
+          if grep -rniE '\b(openai|anthropic|cohere|mistralai|google\.generativeai|litellm|langchain_openai)\b' \
+               packages/python/src packages/typescript/src --include='*.py' --include='*.ts'; then
+            echo "::error::a model client appears in the source of a no-LLM package"
+            exit 1
+          fi
+          echo "no model client in source"
+
+      - name: No network outside the seam
+        run: |
+          py=$(grep -rlE '\b(urllib|requests|httpx|aiohttp|socket)\b' \
+            packages/python/src/prefactor_evals_no_llm --include='*.py' \
+            | grep -v '/source.py$' || true)
+          # The TypeScript seam speaks HTTP through the global fetch. It, like
+          # the Python seam, is the one file allowed to reach the network. Match
+          # the call form, not the word "fetch", which appears in comments.
+          ts=$(grep -rlE "fetch\(|new WebSocket|XMLHttpRequest|from ['\"]node:(http|https|net|dgram|tls)['\"]" \
+            packages/typescript/src --include='*.ts' \
+            | grep -v '/source.ts$' || true)
+          offenders="$py $ts"
+          if [ -n "$(echo "$offenders" | tr -d ' ')" ]; then
+            echo "::error::network access outside the seam: $offenders"
+            exit 1
+          fi
+          echo "all network access confined to the seam in both languages"
+
+      - name: Install and check the dependency tree
+        working-directory: packages/python
+        run: |
+          python -m pip install -e . --quiet
+          python - <<'PY'
+          import importlib.metadata as md
+          deps = md.requires("prefactor-evals-no-llm") or []
+          print("declared dependencies:", deps)
+          banned = ("openai", "anthropic", "cohere", "litellm", "langchain")
+          bad = [d for d in deps if any(b in d.lower() for b in banned)]
+          assert not bad, "model client in dependencies: %s" % bad
+          PY
+
+  house-style:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: No em dashes or smart quotes
+        run: |
+          # House rule, and a practical one: these characters get mangled by
+          # terminals and by the quality summary field this tool writes to.
+          if grep -rnP '[\x{2014}\x{2013}\x{2018}\x{2019}\x{201C}\x{201D}]' \
+               --include='*.py' --include='*.md' --include='*.yaml' \
+               --include='*.yml' --include='*.bat' . ; then
+            echo "::error::em dash, en dash or smart quote found"
+            exit 1
+          fi
+          echo "clean"

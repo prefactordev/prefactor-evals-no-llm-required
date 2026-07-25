@@ -1,0 +1,59 @@
+{
+ "pack": "advanced-conformance",
+ "version": 1,
+ "schema_version": "v1",
+ "span_type_map": {
+  "babylon:specialist": "handoff"
+ },
+ "evals": {
+  "core.cost_budget": {
+   "max_cost": 0.5
+  },
+  "core.forbidden_actions": {
+   "forbidden": [
+    "delete_account",
+    "charge_card"
+   ]
+  },
+  "core.escalation_rule": {
+   "handoff_types": [
+    "handoff"
+   ],
+   "trigger_names": [
+    "eval:realtime"
+   ],
+   "trigger_values": {
+    "struggling": true
+   }
+  },
+  "core.tool_arg_schema": {
+   "schemas": {
+    "lookup": {
+     "type": "object",
+     "properties": {
+      "q": {
+       "type": "string",
+       "pattern": "^[a-z ]+$"
+      }
+     },
+     "required": [
+      "q"
+     ]
+    }
+   }
+  },
+  "core.output_schema": {
+   "schema": {
+    "type": "object",
+    "properties": {
+     "a": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "a"
+    ]
+   }
+  }
+ }
+}

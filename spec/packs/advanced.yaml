@@ -1,0 +1,52 @@
+pack: advanced
+version: 1
+schema_version: v1
+
+# The standard checks plus the optional ones. These are still generic, they work
+# on any agent, but each needs a piece of information only you can supply, so
+# they are off in the standard pack and named here for people who want to go
+# further. Fill in the values before relying on them; left empty, they skip and
+# say what they need.
+
+evals:
+  # Everything from the standard pack.
+  core.errors: {}
+  core.loop_detection:
+    max_occurrences: 3
+  core.redundant_tool_calls:
+    max_repeats: 2
+  core.termination_state:
+    allow_states: [complete]
+  core.latency_budget:
+    max_span_ms: 60000
+  core.efficiency:
+    tolerance: 3.0
+    floor: 12
+  core.conversation_length:
+    tolerance: 3.0
+    floor: 10
+
+  # Optional. Each needs config that cannot be guessed from a trace.
+
+  # What one run is allowed to cost. A business decision, in whatever currency
+  # the account reports. Skips silently on accounts with no cost data.
+  core.cost_budget:
+    max_cost: null
+
+  # Actions this agent must never take, by tool name or pattern.
+  core.forbidden_actions:
+    forbidden: []
+    forbidden_patterns: []
+
+  # The shape each tool's arguments must take, as a JSON Schema per tool.
+  core.tool_arg_schema:
+    schemas: {}
+
+  # The shape the final output must take, as a JSON Schema.
+  core.output_schema:
+    schema: null
+
+  # When the agent should hand off to a human, and what a handoff looks like.
+  core.escalation_rule:
+    handoff_types: [handoff]
+    trigger_names: []

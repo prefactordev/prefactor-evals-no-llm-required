@@ -1,0 +1,480 @@
+{
+ "instances": [
+  {
+   "id": "01kz1adv-cost-under000000000",
+   "agent_id": "01kz1advagent00000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-16T10:00:00Z",
+   "ended_at": "2026-07-16T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "s1",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm",
+     "schema_name": "agent:llm",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": 0.2,
+   "metadata": {}
+  },
+  {
+   "id": "01kz1adv-cost-over0000000000",
+   "agent_id": "01kz1advagent00000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-16T10:00:00Z",
+   "ended_at": "2026-07-16T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "s1",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm",
+     "schema_name": "agent:llm",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": 0.9,
+   "metadata": {}
+  },
+  {
+   "id": "01kz1adv-cost-null0000000000",
+   "agent_id": "01kz1advagent00000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-16T10:00:00Z",
+   "ended_at": "2026-07-16T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "s1",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm",
+     "schema_name": "agent:llm",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz1adv-forbidden-hit000000",
+   "agent_id": "01kz1advagent00000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-16T10:00:00Z",
+   "ended_at": "2026-07-16T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "s1",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "lookup",
+     "schema_name": "agent:lookup",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    },
+    {
+     "id": "s2",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "delete_account",
+     "schema_name": "agent:delete_account",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz1adv-forbidden-clean0000",
+   "agent_id": "01kz1advagent00000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-16T10:00:00Z",
+   "ended_at": "2026-07-16T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "s1",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "lookup",
+     "schema_name": "agent:lookup",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    },
+    {
+     "id": "s2",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "summarize",
+     "schema_name": "agent:summarize",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz1adv-escalation-ok000000",
+   "agent_id": "01kz1advagent00000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-16T10:00:00Z",
+   "ended_at": "2026-07-16T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "s1",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    },
+    {
+     "id": "s2",
+     "parent_id": null,
+     "type": "other",
+     "name": "realtime",
+     "schema_name": "eval:realtime",
+     "state": "complete",
+     "input": {
+      "turn": 1
+     },
+     "output": {
+      "signal": "confused",
+      "struggling": true,
+      "reason": "stuck"
+     },
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    },
+    {
+     "id": "s3",
+     "parent_id": null,
+     "type": "handoff",
+     "name": "specialist",
+     "schema_name": "babylon:specialist",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz1adv-escalation-miss0000",
+   "agent_id": "01kz1advagent00000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-16T10:00:00Z",
+   "ended_at": "2026-07-16T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "s1",
+     "parent_id": null,
+     "type": "output",
+     "name": "user-message",
+     "schema_name": "agent:user-message",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    },
+    {
+     "id": "s2",
+     "parent_id": null,
+     "type": "other",
+     "name": "realtime",
+     "schema_name": "eval:realtime",
+     "state": "complete",
+     "input": {
+      "turn": 1
+     },
+     "output": {
+      "signal": "confused",
+      "struggling": true,
+      "reason": "stuck"
+     },
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz1adv-tools000000000000000",
+   "agent_id": "01kz1advagent00000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-16T10:00:00Z",
+   "ended_at": "2026-07-16T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "s1",
+     "parent_id": null,
+     "type": "tool_call",
+     "name": "connect",
+     "schema_name": "agent:connect",
+     "state": "complete",
+     "input": {
+      "walletType": "OKX"
+     },
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "done"
+   },
+   "cost": null,
+   "metadata": {}
+  },
+  {
+   "id": "01kz1adv-schema-pass00000000",
+   "agent_id": "01kz1advagent00000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-16T10:00:00Z",
+   "ended_at": "2026-07-16T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "s1",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm",
+     "schema_name": "agent:llm",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    },
+    {
+     "id": "s2",
+     "parent_id": "s1",
+     "type": "tool_call",
+     "name": "lookup",
+     "schema_name": "agent:lookup",
+     "state": "complete",
+     "input": {
+      "q": "hello"
+     },
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "ok"
+   },
+   "cost": 0.2,
+   "metadata": {}
+  },
+  {
+   "id": "01kz1adv-schema-fail00000000",
+   "agent_id": "01kz1advagent00000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-16T10:00:00Z",
+   "ended_at": "2026-07-16T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "s1",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm",
+     "schema_name": "agent:llm",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    },
+    {
+     "id": "s2",
+     "parent_id": "s1",
+     "type": "tool_call",
+     "name": "lookup",
+     "schema_name": "agent:lookup",
+     "state": "complete",
+     "input": {
+      "q": 42
+     },
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": 5
+   },
+   "cost": 0.2,
+   "metadata": {}
+  },
+  {
+   "id": "01kz1adv-schema-pattern00000",
+   "agent_id": "01kz1advagent00000000000000",
+   "agent_version": "v1",
+   "environment": "prod",
+   "started_at": "2026-07-16T10:00:00Z",
+   "ended_at": "2026-07-16T10:05:00Z",
+   "state": "complete",
+   "spans": [
+    {
+     "id": "s1",
+     "parent_id": null,
+     "type": "llm_call",
+     "name": "llm",
+     "schema_name": "agent:llm",
+     "state": "complete",
+     "input": {},
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    },
+    {
+     "id": "s2",
+     "parent_id": "s1",
+     "type": "tool_call",
+     "name": "lookup",
+     "schema_name": "agent:lookup",
+     "state": "complete",
+     "input": {
+      "q": "Hello123"
+     },
+     "output": {},
+     "started_at": "2026-07-16T10:00:00Z",
+     "ended_at": "2026-07-16T10:00:01Z",
+     "duration_ms": 5
+    }
+   ],
+   "input": {
+    "q": "hi"
+   },
+   "output": {
+    "a": "ok"
+   },
+   "cost": 0.2,
+   "metadata": {}
+  }
+ ]
+}

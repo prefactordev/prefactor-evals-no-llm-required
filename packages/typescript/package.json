@@ -1,0 +1,37 @@
+{
+  "name": "@prefactor/open-evals",
+  "version": "0.1.0",
+  "description": "Deterministic, non-LLM evals for AI agents. Zero token cost, zero subjectivity, CI friendly.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "bin": {
+    "prefactor-evals-no-llm": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsc -p tsconfig.json && node --test --experimental-strip-types \"tests/**/*.test.ts\""
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  },
+  "keywords": [
+    "agents",
+    "evals",
+    "evaluation",
+    "observability",
+    "prefactor"
+  ]
+}
